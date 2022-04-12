@@ -11,6 +11,14 @@ public class Infografika {
     public String szerokosc;
     public String wysokosc;
 
+    public void print(){
+        System.out.printf("\n\nTytul:%s \n",tytul);
+        System.out.printf("Adres strony:%s \n",adres_strony);
+        System.out.printf("Adres grafiki:%s\n",adres_grafiki);
+        System.out.printf("Adres miniaturki:%s\n",adres_miniaturki);
+        System.out.printf("Rozmiar :%s x %s \n\n",szerokosc,wysokosc);
+
+    }
     public Infografika(String tekst){
         Pattern pat = Pattern.compile("<title><!\\[CDATA\\[(.*)\\]\\]");
         Matcher m = pat.matcher(tekst);
